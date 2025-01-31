@@ -1,0 +1,114 @@
+/* General section styling */
+:root{
+  --dark-color: black;
+  --border-raduis: 50px;
+  --light-color: white;
+  --primary-color: #C3D900;
+}
+.testimonials {
+    background-color: var(--light-color);
+    color: #2c3e50;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .testimonials h2 {
+    color: var(--dark-color); 
+  }
+  .testimonials span {
+    color: var(--primary-color); 
+  }
+  
+  /* Testimonial list styling */
+  .testimonial-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual testimonial card styling */
+  .testimonial {
+    background-color: #ffffff;
+    border-radius: var(--border-raduis);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    margin-top: 1rem;
+  }
+  .testimonial img{
+    border: 2px solid var(--dark-color);
+    border-radius: 120px;
+    height: 135px;
+    width: 50%;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); 
+    border: 1px solid var(--primary-color);
+  }
+  
+  /* Testimonial text styling */
+  .testimonial p {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #7f8c8d; /* Lighter gray text for the quote */
+  }
+  
+  .testimonial h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #34495e;  /* Darker text for the name */
+  }
+  
+  /* Animations for text */
+  .testimonial-list {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Fade-in animation for the testimonials */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive design for mobile screens */
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: 30px 15px;
+    }
+  
+    .testimonial-list {
+      grid-template-columns: 1fr; /* Stack testimonials on small screens */
+      gap: 20px;
+    }
+  
+    .testimonial {
+      max-width: 100%;
+    }
+  
+    .testimonials h2 {
+      font-size: 28px;
+    }
+  
+    .testimonial p {
+      font-size: 14px;
+    }
+  
+    .testimonial h4 {
+      font-size: 16px;
+    }
+  }
+  

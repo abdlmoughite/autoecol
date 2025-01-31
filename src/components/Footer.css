@@ -1,0 +1,229 @@
+:root{
+  --dark-color: black;
+  --border-raduis: 50px;
+  --light-color: white;
+  --primary-color: #C3D900;
+}
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px;
+    }
+  
+    .social-media a {
+      font-size: 14px;
+      margin: 0 5px;
+    }
+  
+    .contact-info p {
+      font-size: 12px;
+    }
+  }
+  .contact-info p a {
+    color: var(--primary-color);
+  }
+.container-footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.child-footer{
+  width: 25%;  
+}
+.child-footer img{
+  width: 50%;
+}
+.social-media a i{
+  color: var(--light-color);
+  padding: 0 1rem;
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.social-media a i:hover{
+  transform: scale(1.4);
+  color: var(--primary-color);
+}
+
+.container-footer .one p{
+  font-size: 15px;
+}
+.container-footer .two ul li{
+  list-style: none;
+  color: var(--light-color);
+  text-decoration: none;
+  margin: 1rem 0;
+}
+.container-footer .two ul li a{
+  color: var(--light-color);
+  text-decoration: none;
+}
+.container-footer .two ul li a:hover{
+  list-style: none;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.container-footer .two ul li {
+  list-style: none;
+}
+
+.buttom-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.buttom-footer ul li{
+  list-style: none;
+}
+
+.container-footer .tree ul li{
+  list-style: none;
+  margin: 2rem 0;
+}
+
+  /* From Uiverse.io by vinodjangid07 */ 
+.input-wrapper {
+  width: fit-content;
+  height: 45px;
+  border-radius: 20px;
+  padding: 5px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  background-color: #292524;
+}
+
+.icon {
+  width: 55px;
+  fill: rgb(255, 255, 255);
+  margin-left: 8px;
+  transition: all 0.3s;
+}
+.input {
+  max-width: 170px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  background-color: #292524;
+  color: white;
+  font-size: 1em;
+}
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
+  -webkit-text-fill-color: #ffffff;
+}
+.Subscribe-btn {
+  width: 95px;
+  border: none;
+  border-radius: var(--border-raduis);
+  padding: 0.8rem 3rem;
+  color: var(--dark-color);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s;
+}
+.arrow {
+  /* display: none; */
+  position: absolute;
+  margin-right: 150px;
+  transition: all 0.3s;
+}
+.input-wrapper:active .icon {
+  transform: scale(1.3);
+}
+.Subscribe-btn:hover {
+  color: var(--light-color);
+  background-color: var(--light-color);
+}
+.Subscribe-btn:hover .arrow {
+  margin-right: 0;
+  animation: jello-vertical 0.9s both;
+  transform-origin: right;
+}
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.Subscribe-btn:active {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 600px) {
+  .container-footer{
+    display: block;
+  }
+  .container-footer .one{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .container-footer .two{
+    width: 100%;
+    text-align: center;
+  }
+  .container-footer .two ul{
+    padding-left: 0;
+  }
+  .container-footer .two b li, .container-footer .tree b li, .contact-info h4{
+    font-size: 25px;
+  }
+  .container-footer .tree{
+    width: 100%;
+    text-align: center;
+  }
+
+  .container-footer .tree ul{
+    padding-left: 0;
+  }
+  .input-wrapper{
+    text-align: center;
+  }
+  .contact-info{
+    text-align: center;
+  }
+  .buttom-footer{
+    display: block;
+  }
+  .buttom-footer p{
+    text-align: center;
+  }
+  .social-media{
+    text-align: center;
+  }
+}

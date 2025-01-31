@@ -1,0 +1,69 @@
+/* Import Leaflet's default styles */
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --dark-color: black;
+  --border-raduis: 50px;
+  --light-color: white;
+  --primary-color: #c3d900;
+}
+/* Ensure the map container has a fixed size */
+.leaflet-container {
+  height: 500px; /* Adjust height as needed */
+  width: 100%; /* Full width */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for better look */
+  z-index: 0;
+  transition: 0.3s;
+}
+.h2-map-cantact{
+  text-align: center;
+  color: #333;
+}
+.h2-map-cantact span{
+  color: var(--primary-color);
+}
+
+/* Style for the popup (optional) */
+.leaflet-popup-content {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Marker styles (optional custom tweaks for consistency) */
+.leaflet-marker-icon {
+  transition: transform 0.2s ease-in-out;
+}
+.leaflet-marker-icon:hover {
+  transform: scale(1.1); /* Slight zoom-in effect when hovering over a marker */
+}
+
+.container-map-contact{
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rounded-icon {
+  border-radius: 50%; /* Rend l'image arrondie */
+  overflow: hidden; /* Coupe les bords pour assurer que tout reste rond */
+}
+
+@media screen and (max-width: 600px){
+  .container-map-contact{
+    display: block;
+    width: 100%;
+  }
+  .contact-form{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 90%;
+  }
+  .leaflet-container{
+    width: 90%;
+  }
+}

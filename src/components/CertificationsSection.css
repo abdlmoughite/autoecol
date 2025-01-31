@@ -1,0 +1,100 @@
+:root{
+    --dark-color: black;
+    --border-raduis: 50px;
+    --light-color: white;
+    --primary-color: #C3D900;
+  }
+.certifications-section {
+    padding: 40px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  .section-title span{
+    color: var(--primary-color);
+  }
+  .certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .certification-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    padding: 20px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .certification-logo {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--border-raduis);
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .certification-details {
+    padding: 0 10px;
+  }
+  
+  .certification-title {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .certification-description {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

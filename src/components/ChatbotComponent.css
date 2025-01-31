@@ -1,0 +1,131 @@
+/* Style de base pour l'icône de chat */
+:root {
+  --dark-color: black;
+  --border-raduis: 50px;
+  --light-color: white;
+  --primary-color: #c3d900;
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.chat-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Fenêtre du chatbot */
+.chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 19px;
+  box-shadow: 0 4px 8px var(--primary-color);
+  padding: 10px;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+.chat-window h3 {
+  text-align: center;
+}
+
+.fa-message {
+  background-color: var(--dark-color);
+  color: var(--primary-color);
+  padding: 0.9rem;
+  border-radius: 40px;
+}
+
+/* Animation d'ouverture */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation de fermeture */
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Liste des questions */
+.question-list{
+    padding-left: 0;
+}
+.reponseChat p{
+    text-align: center;
+}
+.question-list li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+  background-color: var(--light-color);
+  border-radius: var(--border-raduis);
+  transition: background-color 0.2s;
+}
+
+.question-list li:hover {
+  background-color: var(--primary-color);
+}
+
+/* Bouton de retour et de fermeture */
+.reponseChat{
+    text-align: center;
+}
+.chat-button {
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px 3rem;
+  border: none;
+  border-radius: var(--border-raduis);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+  background-color: var(--dark-color);
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.close-button:hover {
+  transform: rotate(360deg);
+  color: var(--primary-color);
+}
