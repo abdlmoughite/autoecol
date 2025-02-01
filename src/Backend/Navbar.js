@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="navbar-dashboard">
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="burger-button"
-      >
-        &#9776;
-      </button>
-    </div>
+    <>
+    </>
+    // <div className="navbar-dashboard">
+    //   <button
+    //     onClick={() => setIsMenuOpen(!isMenuOpen)}
+    //     className="burger-button"
+    //   >
+    //     &#9776;
+    //   </button>
+    // </div>
   );
 };
 

@@ -11,11 +11,12 @@
 /* Sidebar styles */
 .sidebar {
   width: 250px;
-  height: 100vh;
   background-color: black;
   color: white;
   padding: 20px;
   padding-top: 0;
+  margin: 1rem;
+  border-radius: 20px;
 }
 
 .sidebar .profile {
@@ -23,12 +24,19 @@
   margin-bottom: 20px;
 }
 
+.hr-dashboard{
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0px 0px 15px var(--primary-color);
+  border-radius: 20px;
+}
+
 .sidebar .logo-dashboard {
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 50%;
 }
 
 .navbar-dashboard {
@@ -47,7 +55,7 @@
 
 .sidebar .profile img {
   border-radius: 50%;
-  width: 35%;
+  width: 25%;
   height: 70px;
 }
 
@@ -63,11 +71,21 @@
 
 .sidebar ul li {
   margin: 10px 0;
+  padding: 0.5rem;
+  transition: 0.2s;
+  border-radius: 13px;
+}
+.sidebar ul li:hover{
+  background-color: #343434;
+  cursor: pointer;
 }
 
+#logout-dashboard:hover{
+  background-color: #380000;
+}
 .sidebar ul li a {
   color: white;
-  font-size: 20px;
+  font-size: 19px;
   text-decoration: none;
 }
 

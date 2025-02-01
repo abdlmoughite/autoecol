@@ -196,6 +196,7 @@ const Clients = () => {
         <h2 className="text-2xl font-semibold mb-4 h2-dashboard">
           Liste des Clients
         </h2>
+
         <div className="overflow-x-auto">
           <Paper sx={{ height: 400, width: "100%" }}>
             <DataGrid
@@ -391,22 +392,22 @@ const Clients = () => {
                 autoComplete="off"
                 className="child-paiment-one"
               >
-                  <h2>Paiment:</h2>
-                  <Stack sx={{ gap: 3 }}>
-                    <TextField
-                      sx={{ flex: 1 }}
-                      label="Paiment (DH)"
-                      variant="standard"
-                    />
-                    <LocalizationProvider
-                      sx={{ flex: 1 }}
-                      dateAdapter={AdapterDayjs}
-                    >
-                      <DemoContainer components={["DatePicker"]}>
-                        <DatePicker label="Date de paiment" />
-                      </DemoContainer>
-                    </LocalizationProvider>
-                  </Stack>
+                <h2>Paiment:</h2>
+                <Stack sx={{ gap: 3 }}>
+                  <TextField
+                    sx={{ flex: 1 }}
+                    label="Paiment (DH)"
+                    variant="standard"
+                  />
+                  <LocalizationProvider
+                    sx={{ flex: 1 }}
+                    dateAdapter={AdapterDayjs}
+                  >
+                    <DemoContainer components={["DatePicker"]}>
+                      <DatePicker label="Date de paiment" />
+                    </DemoContainer>
+                  </LocalizationProvider>
+                </Stack>
               </Box>
               <Box className="child-paiment-two">
                 <Card>
@@ -425,13 +426,25 @@ const Clients = () => {
                       <Typography variant="h5" component="div">
                         Total paiment : 200DH
                       </Typography>
-                      <Typography sx={{fontSize: "18px", marginTop: "2rem"}} variant="body2" color="text.secondary">
+                      <Typography
+                        sx={{ fontSize: "18px", marginTop: "2rem" }}
+                        variant="body2"
+                        color="text.secondary"
+                      >
                         La date : 24/11/2004 | Le prix : 1500 DH
                       </Typography>
-                      <Typography sx={{fontSize: "18px", marginTop: "2rem"}} variant="body2" color="text.secondary">
+                      <Typography
+                        sx={{ fontSize: "18px", marginTop: "2rem" }}
+                        variant="body2"
+                        color="text.secondary"
+                      >
                         La date : 24/11/2004 | Le prix : 1500 DH
                       </Typography>
-                      <Typography sx={{fontSize: "18px", marginTop: "2rem"}} variant="body2" color="text.secondary">
+                      <Typography
+                        sx={{ fontSize: "18px", marginTop: "2rem" }}
+                        variant="body2"
+                        color="text.secondary"
+                      >
                         La date : 24/11/2004 | Le prix : 1500 DH
                       </Typography>
                     </CardContent>
