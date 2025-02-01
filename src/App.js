@@ -21,6 +21,7 @@ import Navbar from "./Backend/Navbar";
 import Sidebar from "./Backend/Sidebar";
 import Dashboard from "./Backend/Dashboard";
 import Clients from "./Backend/pages/Clients";
+import Categories from "./Backend/pages/Categories";
 
 // Custom hook to check the current route inside the BrowserRouter
 const useIsDashboardRoute = () => {
@@ -84,6 +85,7 @@ function Main() {
                 <Routes>
                   <Route path="/" element={<Dashboard />} />
                   <Route path="/clients" element={<Clients />} />
+                  <Route path="/categories" element={<Categories />} />
                  
                 </Routes>
               </div>

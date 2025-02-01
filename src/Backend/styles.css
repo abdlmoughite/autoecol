@@ -174,3 +174,8 @@
 .child-paiment-one{
   width: 40%;
 }
+
+/* Categorie */
+.h2-categories{
+  color: var(--primary-color);
+}

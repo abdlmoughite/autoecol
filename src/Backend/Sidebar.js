@@ -15,14 +15,13 @@ const Sidebar = () => {
         className="logo-dashboard"
       />
       <hr></hr>
-      <div className="profile">
+      {/* <div className="profile">
         <img
           src={`${process.env.PUBLIC_URL}/image/person1.jpg`}
           alt="Profile"
         />
         <p>User Name</p>
-      </div>
-      <hr></hr>
+      </div> */}
       <ul>
         <li>
           <i style={{paddingRight: "1rem", fontSize: "22px"}} class="fa-solid fa-user"></i>{" "}
@@ -52,7 +51,7 @@ const Sidebar = () => {
                 <Link to="/configuration/profile">Profile</Link>
               </li>
               <li>
-                <Link to="/configuration/categories">Categories</Link>
+                <Link to="/dashboard/categories">Categories</Link>
               </li>
               <li>
                 <Link to="/configuration/vehucule">Vehicule</Link>
