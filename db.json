@@ -1,0 +1,76 @@
+{
+  "client": [
+    {
+      "id": "6fae",
+      "lastName": "Snow",
+      "firstName": "Jon",
+      "telephone": "0658574774",
+      "dateInscription": "24/22/2002",
+      "categorie": "24/22/2002",
+      "prix": "24/22/2002",
+      "email": "super@super",
+      "password" : "super@super"
+    },
+    {
+      "id": "6fae",
+      "lastName": "Snow",
+      "firstName": "Jon",
+      "telephone": "0658574774",
+      "dateInscription": "24/22/2002",
+      "categorie": "24/22/2002",
+      "prix": "24/22/2002",
+      "email": "client@client",
+      "password" : "client@client",
+      "numeroIdentification": "z",
+      "adresse": "z",
+      "role":"client",
+      "photoPersonnelle": {},
+      "photoCarteIdentiteFaceAvant": {},
+      "photoCarteIdentiteFaceArriere": {}
+    }
+    ,
+    {
+      "id": "6fae",
+      "lastName": "Snow",
+      "firstName": "Jon",
+      "telephone": "0658574774",
+      "dateInscription": "24/22/2002",
+      "categorie": "24/22/2002",
+      "prix": "24/22/2002",
+      "email": "admin@admin",
+      "password" : "admin@admin",
+      "numeroIdentification": "z",
+      "adresse": "z",
+      "role":"admin",
+      "photoPersonnelle": {},
+      "photoCarteIdentiteFaceAvant": {},
+      "photoCarteIdentiteFaceArriere": {}
+    }
+    ,
+    {
+      "id": "6fae",
+      "lastName": "Snow",
+      "firstName": "Jon",
+      "telephone": "0658574774",
+      "dateInscription": "24/22/2002",
+      "categorie": "24/22/2002",
+      "prix": "24/22/2002",
+      "email": "moniteur@moniteur",
+      "password" : "moniteur@moniteur",
+      "numeroIdentification": "z",
+      "adresse": "z",
+      "role":"moniteur",
+      "photoPersonnelle": {},
+      "photoCarteIdentiteFaceAvant": {},
+      "photoCarteIdentiteFaceArriere": {}
+    }
+  ],
+  "moniteure" :[ 
+    { "id":1,"name": "Mohamed Jamal","code":"3333"}
+  ],
+  "vehicules" :
+  [{ "id": 1, "matricule": "T12345678", "categorie":"A"}]
+  , 
+  "categories" :
+  { "id": 1, "letter": "A", "name": "Category A", "price":"1500DH"}
+}

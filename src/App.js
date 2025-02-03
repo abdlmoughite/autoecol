@@ -22,11 +22,29 @@ import Sidebar from "./Backend/Sidebar";
 import Dashboard from "./Backend/Dashboard";
 import Clients from "./Backend/pages/Clients";
 import Categories from "./Backend/pages/Categories";
+// login 
+import LoginSignUp from './login/login'
+import Dashbordclient from "./client/dashbordClient";
+import Dashbordadmine from "./admin/dashborddmin";
+import Dashbordmoniteur from "./moniteur/dashbordmoniteur";
+import Sidebarclient from "./client/SidebarClient";
+import DashboardC from "./client/DashboardC";
+import SidebarClient from "./client/SidebarClient";
+import VideoListPage from "./client/vedio";
+import ProfileC from "./client/ProfileC";
+import PermisC from "./client/Permis";
+import PaymentsC from "./client/Payments";
 
 // Custom hook to check the current route inside the BrowserRouter
 const useIsDashboardRoute = () => {
   const location = useLocation();
-  return location.pathname.startsWith("/dashboard");
+  return location.pathname.startsWith("/dashboard") ||
+         location.pathname.startsWith("/VideoListPage") ||
+         location.pathname.startsWith("/ProfileC") ||
+         location.pathname.startsWith("/PaymentsC") ||
+         location.pathname.startsWith("/PermisC") ||
+         location.pathname.startsWith("/DashboardC") ||
+         location.pathname.startsWith("/Dashbordclient");
 };
 
 function App() {
@@ -53,46 +71,174 @@ function Main() {
         </>
       )}
 
-      <Routes>
-        {/* Public Routes (non-dashboard) */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <Courses />
-              <ReservationSection />
-              <CertificationsSection />
-              <Testimonials />
-              <BranchMap />
-            </>
-          }
-        />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/reservation" element={<DrivingSchoolForm />} />
+<Routes>
+  {/* Public Routes (non-dashboard) */}
+  <Route
+    path="/"
+    element={
+      <>
+        <Hero />
+        <Courses />
+        <ReservationSection />
+        <CertificationsSection />
+        <Testimonials />
+        <BranchMap />
+      </>
+    }
+  />
+  <Route path="/courses" element={<Courses />} />
+  <Route path="/testimonials" element={<Testimonials />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/reservation" element={<DrivingSchoolForm />} />
+  <Route path="/login" element={<LoginSignUp />} /> {/* Route ajoutée */}
 
-        {/* Dashboard Routes */}
-        <Route
-          path="/dashboard/*" // This will match /dashboard and its child routes
-          element={
-            <div style={{ display: "flex" }}>
-              <Sidebar /> {/* Sidebar for dashboard */}
-              <div style={{ flex: 1 }}>
-                <Navbar /> {/* Navbar for dashboard */}
-                <Routes>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="/clients" element={<Clients />} />
-                  <Route path="/categories" element={<Categories />} />
-                 
-                </Routes>
-              </div>
-            </div>
-          }
-        />
-      </Routes>
+  {/* Dashboard Routes */}
+  <Route
+    path="/dashboard/*"
+    element={
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/Dashbordclient/*"
+    element={
+      <div style={{ display: "flex" }}>
+        {/* <Sidebar /> */}
+        <SidebarClient/>
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Dashbordclient />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/Dashbordadmine/*"
+    element={
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Dashbordadmine />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/Dashbordmoniteur/*"
+    element={
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Dashbordmoniteur />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/PermisC"
+    element={
+      <div style={{ display: "flex" , background : 'gray' }}>
+        <SidebarClient/>
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<PermisC />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/VideoListPage"
+    element={
+      <div style={{ display: "flex" , background : 'gray'  }}>
+        <SidebarClient/>
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<VideoListPage />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/DashboardC"
+    element={
+      <div style={{ display: "flex" , background : 'gray'  }}>
+        <SidebarClient/>
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<DashboardC />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/PaymentsC"
+    element={
+      <div style={{ display: "flex", background : 'gray'  }}>
+        <SidebarClient/>
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<PaymentsC />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/ProfileC"
+    element={
+      <div style={{ display: "flex" , background : 'gray'  }}>
+        <SidebarClient/>
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ProfileC />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </div>
+      </div>
+    }
+  />
+</Routes>
 
       {/* Footer (only shown on public pages) */}
       {!isDashboardRoute && <Footer />}

@@ -34,6 +34,11 @@ function Header() {
                 <strong> S'inscrire</strong>
               </button>
             </Link>
+            <Link to="/login" >
+              <button id="bottone1">
+                <strong> Login </strong>
+              </button>
+            </Link>
         </ul>
       </nav>
       {/* Hamburger Menu Button */}
